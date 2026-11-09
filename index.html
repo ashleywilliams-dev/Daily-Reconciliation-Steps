@@ -18,24 +18,15 @@
     color: var(--purple);
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-    max-width: 620px;
-    margin: 0 auto;
-  }
-  header {
-    background: var(--purple);
-    color: #fff;
-    padding: 0.45em 0.9em;
-    font-weight: 700;
-    font-size: 1.35em;
-    line-height: 1.2;
+    font-size: 28px;
+    height: 100%;
   }
   ol {
     list-style: none;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 0.2em 0.9em 0.3em;
     counter-reset: step;
   }
@@ -64,7 +55,6 @@
 </style>
 </head>
 <body>
-  <header>Steps of Daily Reconciliation</header>
   <ol>
     <li><div><div class="name">Ending Count Submitted</div><div class="what">Lilly Med Cart &amp; Cooler Counts dated the Shipment Date</div></div></li>
     <li><div><div class="name">All Transactions Released</div><div class="what">No unreleased transactions dated the Shipment Date or prior</div></div></li>
