@@ -18,9 +18,9 @@
     color: var(--purple);
     display: flex;
     flex-direction: column;
-    /* Scale from whichever is tighter, the tile width or its height, so the five rows always fit */
-    font-size: min(2.6vw, 5.3vh);
-    overflow: hidden;
+    font-size: 14px;
+    max-width: 620px;
+    margin: 0 auto;
   }
   header {
     background: var(--purple);
@@ -60,7 +60,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .name { font-weight: 700; font-size: 1.1em; line-height: 1.2; }
-  .what { font-size: 0.82em; line-height: 1.25; margin-top: 0.1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .what { font-size: 0.86em; line-height: 1.25; margin-top: 0.1em; }
 </style>
 </head>
 <body>
