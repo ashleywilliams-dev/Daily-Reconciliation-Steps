@@ -12,13 +12,13 @@
     --bg: #FFFFFF;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; background: var(--bg); }
+  html, body { height: 100%; background: var(--bg); overflow: hidden; }
   body {
     font-family: "Funnel Display", "Inter", system-ui, sans-serif;
     color: var(--purple);
     display: flex;
     flex-direction: column;
-    font-size: 28px;
+    font-size: 25px;
     height: 100%;
   }
   ol {
@@ -26,8 +26,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0.2em 0.9em 0.3em;
+    justify-content: flex-start;
+    padding: 0.1em 0.8em 0.2em;
     counter-reset: step;
   }
   li {
@@ -36,7 +36,7 @@
     grid-template-columns: 1.8em 1fr;
     column-gap: 0.9em;
     align-items: center;
-    padding: 0.22em 0;
+    padding: 0.1em 0;
     border-bottom: 1px solid var(--rule);
   }
   li:last-child { border-bottom: 0; }
