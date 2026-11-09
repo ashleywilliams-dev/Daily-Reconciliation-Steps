@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steps of Daily Reconciliation</title>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #440B39;
+    --rule: #E6E6E6;
+    --bg: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); }
+  body {
+    font-family: "Funnel Display", "Inter", system-ui, sans-serif;
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    /* Scale from whichever is tighter, the tile width or its height, so the five rows always fit */
+    font-size: min(2.4vw, 3.4vh);
+    overflow: hidden;
+  }
+  header {
+    background: var(--purple);
+    color: #fff;
+    padding: 0.45em 0.9em;
+    font-weight: 700;
+    font-size: 1.35em;
+    line-height: 1.2;
+  }
+  ol {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.2em 0.9em 0.3em;
+    counter-reset: step;
+  }
+  li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 1.8em 1fr;
+    column-gap: 0.9em;
+    align-items: center;
+    padding: 0.22em 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  li:last-child { border-bottom: 0; }
+  li::before {
+    content: counter(step);
+    width: 1.8em; height: 1.8em;
+    border-radius: 50%;
+    background: var(--purple);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .name { font-weight: 700; font-size: 1.1em; line-height: 1.2; }
+  .what { font-size: 0.82em; line-height: 1.25; margin-top: 0.1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style>
+</head>
+<body>
+  <header>Steps of Daily Reconciliation</header>
+  <ol>
+    <li><div><div class="name">Ending Count Submitted</div><div class="what">Lilly Med Cart &amp; Cooler Counts dated the Shipment Date</div></div></li>
+    <li><div><div class="name">All Transactions Released</div><div class="what">No unreleased transactions dated the Shipment Date or prior</div></div></li>
+    <li><div><div class="name">All Issues Released</div><div class="what">No unreleased issues dated the Shipment Date or prior</div></div></li>
+    <li><div><div class="name">Variance Is 0</div><div class="what">Issued qty matches Beginning + Receipts &minus; Damages &minus; Ending</div></div></li>
+    <li><div><div class="name">LILLY Qty Is 0</div><div class="what">The LILLY location is empty at the end of the day</div></div></li>
+  </ol>
+</body>
+</html>
